@@ -27,6 +27,10 @@ const roles = {
     ]
 };
 
+for (const category in roles) {
+    roles[category].sort((a, b) => a.name.localeCompare(b.name));
+}
+
 function populateTable() {
     const tbody = document.getElementById('roleTableBody');
     tbody.innerHTML = '';
