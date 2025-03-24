@@ -25,15 +25,26 @@ function populateTable() {
     const tbody = document.getElementById('roleTableBody');
     tbody.innerHTML = '';
 
-    for (const category in roles) {
-        const sortedRoles = roles[category].sort((a, b) => a.name.localeCompare(b.name));
-        sortedRoles.forEach(role => {
-            const row = document.createElement('tr');
+    const maxRows = Math.max(
+        roles.crewmate.length,
+        roles.impostor.length,
+        roles.netral.length,
+        roles.coven.length,
+        roles.addon.length
+    );
+
+    for (let i = 0; i < maxRows; i++) {
+        const row = document.createElement('tr');
+
+        for (const category in roles) {
             const cell = document.createElement('td');
-            cell.innerHTML = `<a href="#" onclick="showInfo('${role.name}')">${role.name}</a>`;
+            if (roles[category][i]) {
+                const role = roles[category][i];
+                cell.innerHTML = `<a href="#" onclick="showInfo('${role.name}')">${role.name}</a>`;
+            }
             row.appendChild(cell);
-            tbody.appendChild(row);
-        });
+        }
+        tbody.appendChild(row);
     }
 }
 
