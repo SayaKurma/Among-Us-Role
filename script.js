@@ -1,7 +1,7 @@
 const roles = {
     crewmate: [
         { name: 'Soothsayer', info: 'Selaku Soothsayer, kamu dapat memprediksikan siapa yang akan menjadi pembunuhmu. Jika prediksimu benar, identitas pelaku akan diumumkan kepada seluruh pemain setelah kamu terbunuh.' },
-        { name: 'Crewmate 2', info: 'Informasi tentang Crewmate 2' }
+        { name: 'Gaulois', info: '"Selaku Gaulois, kamu dapat memberikan pemain lain peningkatan laju jalan secara permanen dengan menggunakan tombol Kill.' }
     ],
     impostor: [
         { name: 'Ventriloquist', info: 'Selaku Ventriloquist, kamu dapat memalsukan ucapan pemain lain. Pertama-tama, tentukan pemain yang identitasnya ingin kamu gunakan dengan perintah <b>/target {ID}</b>. Setelah itu, kirim pesan yang kamu inginkan dengan memanfaatkan identitas pemain tersebut melalui perintah <b>/chat {pesan}</b>.' },
