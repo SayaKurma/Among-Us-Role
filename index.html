@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Among Us Role</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Crewmate</th>
+                <th>Impostor</th>
+                <th>Netral</th>
+                <th>Coven</th>
+                <th>Add-on</th>
+            </tr>
+        </thead>
+        <tbody id="roleTableBody">
+        </tbody>
+    </table>
+
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="roleInfo"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
