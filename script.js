@@ -11,15 +11,18 @@ const roles = {
     ],
     netral: [
         { name: 'Netral 1', info: 'Informasi tentang Netral 1' },
-        { name: 'Netral 2', info: 'Informasi tentang Netral 2' }
+        { name: 'Netral 2', info: 'Informasi tentang Netral 2' }, 
+        { name: 'Netral 3', info: 'Informasi tentang Netral 3' }
     ],
     coven: [
         { name: 'Coven 1', info: 'Informasi tentang Coven 1' },
-        { name: 'Coven 2', info: 'Informasi tentang Coven 2' }
+        { name: 'Coven 2', info: 'Informasi tentang Coven 2' }, 
+        { name: 'Coven 3', info: 'Informasi tentang Coven 3' }
     ],
     addon: [
         { name: 'Add-on 1', info: 'Informasi tentang Add-on 1' },
-        { name: 'Add-on 2', info: 'Informasi tentang Add-on 2' }
+        { name: 'Add-on 2', info: 'Informasi tentang Add-on 2' }, 
+        { name: 'Add-on 3', info: 'Informasi tentang Add-on 3' },
     ]
 };
 
