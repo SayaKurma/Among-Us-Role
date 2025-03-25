@@ -46,32 +46,34 @@ function populateTable() {
     for (let i = 0; i < maxRows; i++) {
         const row = document.createElement('tr');
 
-        for (const category in roles) {
+        const categories = ['crewmate', 'impostor', 'netral', 'coven', 'addon'];
+        categories.forEach(category => {
             const cell = document.createElement('td');
             if (roles[category][i]) {
                 const role = roles[category][i];
                 cell.innerHTML = `<a href="#" onclick="showInfo('${role.name}')">${role.name}</a>`;
             }
             row.appendChild(cell);
-        }
+        });
+
         tbody.appendChild(row);
     }
 }
 
-window.onload = populateTable;
-
 function showInfo(roleName) {
     const infoModal = document.getElementById('infoModal');
     const roleInfo = document.getElementById('roleInfo');
-    
+    const roleModalTitle = document.getElementById('roleModalTitle');
+
     for (const category in roles) {
         const role = roles[category].find(r => r.name === roleName);
         if (role) {
+            roleModalTitle.textContent = role.name;
             roleInfo.innerHTML = role.info;
             break;
         }
     }
-    
+
     infoModal.style.display = "block";
 }
 
@@ -85,3 +87,5 @@ window.onclick = function(event) {
         infoModal.style.display = "none";
     }
 }
+
+window.onload = populateTable;
