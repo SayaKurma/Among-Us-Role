@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Role Room</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Among Us Role</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Crewmate</th>
-                <th>Impostor</th>
-                <th>Netral</th>
-                <th>Coven</th>
-                <th>Add-on</th>
-            </tr>
-        </thead>
-        <tbody id="roleTableBody">
-        </tbody>
-    </table>
+    <div class="container">
+        <header>
+            <h1>Among Us Role</h1>
+            <div class="spaceship-bg"></div>
+        </header>
 
-    <div id="infoModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <p id="roleInfo"></p>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="crewmate-header">Crewmate</th>
+                        <th class="impostor-header">Impostor</th>
+                        <th class="netral-header">Netral</th>
+                        <th class="coven-header">Coven</th>
+                        <th class="addon-header">Add-on</th>
+                    </tr>
+                </thead>
+                <tbody id="roleTableBody">
+                </tbody>
+            </table>
+        </main>
+
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="role-modal-header">
+                    <h2 id="roleModalTitle"></h2>
+                </div>
+                <p id="roleInfo"></p>
+            </div>
         </div>
     </div>
 
